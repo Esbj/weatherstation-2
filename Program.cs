@@ -15,7 +15,38 @@ namespace weatherstation_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List <string> städer = new List <string>();
+            Console.WriteLine("Välkommen till väderstationen!");
+            while(true){
+                Console.WriteLine("Vad vill du göra?");
+                Console.WriteLine("");
+                Console.WriteLine("Lägg till stad");
+                Console.WriteLine("Byt tempratur på stad");
+                Console.WriteLine("Medeltempratur på städer");
+                Console.WriteLine("Kallast stad");
+                Console.WriteLine("Varmast stad");
+                Console.WriteLine("Avsluta programmet");
+                
+                string input = Console.ReadLine();
+                char choise = input[0];
+                switch(choise){
+                    case 'L'://Lägg till stad
+                        break;
+                    case 'B'://Byt temp
+                        break;
+                    case 'M'://Medeltemp
+                        break;
+                    case 'K'://Kallast Temp
+                        break;
+                    case 'V'://Varmast temp
+                        break;
+                    default://Felhantering
+                        Console.WriteLine("Ange endast det som står i menyn");
+                        break;
+                    case 'A'://Avsluta programmet
+                        return;
+                }
+            }
         }
     }
 }
